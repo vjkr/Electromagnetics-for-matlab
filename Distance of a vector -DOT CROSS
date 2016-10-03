@@ -1,0 +1,17 @@
+clc; %clear the command line
+clear; %remove all previous variables
+O=[0 0 0];%the origin
+M=[2 2 2];
+MO=M-O;%vector R_MO
+sqMO=MO.^2;
+addMO=sqMO(1)+sqMO(2)+sqMO(3);
+distMO=sqrt(addMO);
+
+
+A=[2 4 -3];
+B=[1 -1 0];
+ACROSSB= cross(A,B);
+A=[2 4 -3];
+B=[1 -1 0];
+ADOTB= dot(A,B);
+display(ADOTB)
