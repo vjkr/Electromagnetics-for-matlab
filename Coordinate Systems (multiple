@@ -1,0 +1,36 @@
+clc
+clear all
+hold on
+for r=0:1:10;
+t=linspace(0,2*pi);
+z=linspace(-10,10);
+[t,z]=meshgrid(t,z);
+[x,y,z]=pol2cart(t,r,z);
+surf(x,y,z)
+end
+%cylindrical
+
+clc
+clear all
+hold on
+for z=0:1:100;
+x=linspace(10,20);
+y=linspace(0,10);
+[x,y,z]=meshgrid(x,y,z);
+surf(x,y,z)
+end
+%cartesian
+
+
+
+clc
+clear all
+hold on
+for r=0:1:10;
+p=linspace(-pi/2,pi/2);
+t=linspace(0,2*pi);
+[t,p]=meshgrid(t,p);
+[x,y,z]=sph2cart(t,p,r);
+surf(x,y,z)
+end
+%spherical
