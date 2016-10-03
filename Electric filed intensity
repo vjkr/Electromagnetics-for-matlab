@@ -1,0 +1,13 @@
+clc; %clear the command line
+clear; %remove all previous variables
+O=[0 0 0];%the origin
+M=[-4 2 -3];
+MO=M-O;%vector R_MO
+sqMO=MO.^2;
+addMO=sqMO(1)+sqMO(2)+sqMO(3);
+r=sqrt(addMO);
+ar=MO/r;
+Epsilono=8.854e-12; %use permittivity of air
+Q=64.4*10^-9;
+E=(Q*(1/(4*pi*Epsilono))*(1/r^2))*ar;
+vecE=dot(E,ar);
