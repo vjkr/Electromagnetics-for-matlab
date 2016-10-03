@@ -1,0 +1,29 @@
+
+t = [0:0.1:2*pi]
+a = sin(t);
+plot(t,a)
+%sine with no magnitude
+t = [0:0.1:2*pi]
+a1 = sin(t);
+a=a1.^2;
+plot(t,a)
+%sine wave with squared amplitude
+t = [0:0.1:2*pi]
+a1 = sin(t);
+a=a1.^2;
+plot(t,a)
+hold on
+t = [0:0.1:2*pi]
+a1 = cos(t);
+a=a1.^2;
+plot(t,a)
+%sine and cos wave
+t = [0:0.1:2*pi]
+a = 2*sin(t);
+plot(t,a)
+%sine with magnitude 2
+t = [0:0.1:2*pi]
+a = 2*sin(t);
+a1= a+3;
+plot(t,a1)
+%sine with magnitude 2 and DC shift 3
